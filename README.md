@@ -1,4 +1,14 @@
-# 🚀Advanced_Interview_responder_with_AI
+<img src="./assets/Advanced_Interview_Responder_with_AI.png">
+
+<!-- At first glance, the branding and messaging clearly conveys what to expect -->
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mouafo-kamgno-keryan-gift-017403292/)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mouafokeryan@gmail.com)
+
+</div>
+<br />
+# 🚀Advanced_Interview_Responder_with_AI
 
 The **Advanced Interview Responder** is a cutting-edge tool designed to assist users during interviews by leveraging artificial intelligence. It generates contextually relevant responses based on the user's resume and interview questions, displayed in real-time on a teleprompter interface. This allows users to maintain eye contact with the interviewer while confidently delivering their answers.
 
