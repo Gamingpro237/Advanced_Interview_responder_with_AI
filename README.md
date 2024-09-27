@@ -8,6 +8,7 @@
 
 </div>
 <br />
+
 # 🚀Advanced_Interview_Responder_with_AI
 
 The **Advanced Interview Responder** is a cutting-edge tool designed to assist users during interviews by leveraging artificial intelligence. It generates contextually relevant responses based on the user's resume and interview questions, displayed in real-time on a teleprompter interface. This allows users to maintain eye contact with the interviewer while confidently delivering their answers.
@@ -31,7 +32,7 @@ The **Advanced Interview Responder** is a cutting-edge tool designed to assist u
 
 ### 📋 Prerequisites
 
-- [Python 3.x](https://www.python.org/downloads/) installed on your system
+- [Python 3.12.4 AND ABOVE](https://www.python.org/downloads/) installed on your system
 - An [OpenAI API key](https://platform.openai.com/account/api-keys) (replace `"your_openai_api_key_here"` in the code with your actual API key)
 - Vosk speech recognition model (download from [Vosk Models](https://alphacephei.com/vosk/models))
 
@@ -57,9 +58,9 @@ pip install -r requirements.txt
 The `requirements.txt` file includes:
 
 ```
-vosk==0.3.34
-pyaudio==0.2.13
-openai==0.27.0
+vosk==0.3.45
+pyaudio==0.2.14
+openai==1.37.1
 PyPDF2==3.0.1
 keyboard==0.13.5
 ```
@@ -75,8 +76,8 @@ Creating a virtual environment is recommended to manage dependencies separately 
 1. **Clone the Repository**:
 
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/Gamingpro237/Advanced_Interview_responder_with_AI.git
+   cd Advanced_Interview_responder_with_AI
    ```
 
 2. **Create a Virtual Environment**:
@@ -126,8 +127,8 @@ If you prefer to install the dependencies globally without using a virtual envir
 1. **Clone the Repository**:
 
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/Gamingpro237/Advanced_Interview_responder_with_AI.git
+   cd Advanced_Interview_responder_with_AI
    ```
 
 2. **Install the Required Libraries**:
