@@ -34,7 +34,22 @@ The **Advanced Interview Responder** is a cutting-edge tool designed to assist u
 
 - [Python 3.12.4 AND ABOVE](https://www.python.org/downloads/) installed on your system
 - An [OpenAI API key](https://platform.openai.com/account/api-keys) (replace `"your_openai_api_key_here"` in the code with your actual API key)
-- Vosk speech recognition model (download from [Vosk Models](https://alphacephei.com/vosk/models))
+- Vosk speech recognition model (download from [Vosk Models](https://alphacephei.com/vosk/models)
+- Here’s a list of Vosk English speech recognition models and their system requirements:
+
+### 1. **Lightweight English Models**
+   - **Model size**: ~50 MB
+   - **System requirements**:
+     - **RAM**: Minimum 1 GB
+     - **CPU**: Mid-range CPU (equivalent to Raspberry Pi or Android devices)
+     - **Performance**: Suitable for real-time offline speech recognition on constrained devices【7†source】【8†source】.
+
+### 2. **Large English Models for Quality listening**
+   - **Model size**: 1.4 GB to 4.4 GB
+   - **System requirements**:
+     - **RAM**: 4 GB or more recommended
+     - **CPU**: Multi-core processors
+     - **Performance**: Designed for server environments with better accuracy but higher resource consumption【8†source】【9†source】.
 
 ### 📦 Libraries
 
