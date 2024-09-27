@@ -6,6 +6,9 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mouafo-kamgno-keryan-gift-017403292/)
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mouafokeryan@gmail.com)
 
+You can ask your questions here in my telegram group.
+
+[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/+_eppACRhjXhlMjE0)
 </div>
 <br />
 
@@ -30,6 +33,7 @@ The **Advanced Interview Responder** is a cutting-edge tool designed to assist u
 
 ## 🧩 Installation
 
+[watch my YouTube video on how to setup](https://youtu.be/WN9aiMDKxFw?si=LWV4OSmOn5myTUAU)
 ### 📋 Prerequisites
 
 - [Python 3.12.4 AND ABOVE](https://www.python.org/downloads/) installed on your system
@@ -81,6 +85,8 @@ keyboard==0.13.5
 ```
 
 ### ▶️ Running the Application
+
+[watch my YouTube video on how to setup](https://youtu.be/WN9aiMDKxFw?si=LWV4OSmOn5myTUAU)
 
 You can run the application using one of the following methods:
 
