@@ -33,7 +33,7 @@ The **Advanced Interview Responder** is a cutting-edge tool designed to assist u
 
 ## 🧩 Installation
 
-[watch my YouTube video on how to setup](https://youtu.be/WN9aiMDKxFw?si=LWV4OSmOn5myTUAU)
+[watch my YouTube video on how to setup](https://youtu.be/WN9aiMDKxFw?si=LWV4OSmOn5myTUAU) And detailed explanation.
 ### 📋 Prerequisites
 
 - [Python 3.12.4 AND ABOVE](https://www.python.org/downloads/) installed on your system
@@ -86,7 +86,7 @@ keyboard==0.13.5
 
 ### ▶️ Running the Application
 
-[watch my YouTube video on how to setup](https://youtu.be/WN9aiMDKxFw?si=LWV4OSmOn5myTUAU)
+[watch my YouTube video on how to setup](https://youtu.be/WN9aiMDKxFw?si=LWV4OSmOn5myTUAU) and detailed explanation.
 
 You can run the application using one of the following methods:
 
