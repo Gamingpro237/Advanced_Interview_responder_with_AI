@@ -29,6 +29,10 @@ if not os.path.exists(vosk_model_path):
 model = Model(vosk_model_path)
 recognizer = KaldiRecognizer(model, 16000)
 
+pause_event = threading.Event()
+
+TOGGLE_KEY = 'space' #AI bot will repond only to this key
+
 # Initialize PyAudio
 p = pyaudio.PyAudio()
 stream = p.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=8000)
@@ -106,7 +110,7 @@ def get_response_from_openai(prompt, resume_context):
                 model="gpt-3.5-turbo",
                 messages=[
              {"role":"user","content":full_prompt}],
-            
+
            max_tokens=60,
               n=1,
         stop=None,
@@ -186,17 +190,19 @@ def transcribe_audio():
                 return text
 
 # Pause and resume mechanism
-pause_event = threading.Event()
-def toggle_pause_resume():
-    if pause_event.is_set():
-        print("Resuming bot...")
-        pause_event.clear()
+def toggle_pause_resume(event):
+    if event.name != TOGGLE_KEY:
+        print(f'Please use toggle key = {TOGGLE_KEY} to pause/resume')
     else:
-        print("Pausing bot...")
-        pause_event.set()
+        if pause_event.is_set():
+            print("Resuming the bot...")
+            pause_event.clear()
+        else:
+            print("Pausing the bot...")
+            pause_event.set()
 
 def listen_for_keyboard():
-    keyboard.on_press(lambda _: toggle_pause_resume(), lambda _: stop_and_clear_recording())
+    keyboard.on_press(toggle_pause_resume)
     keyboard.wait()  # Keep the listener active
 
 # Main interview process
