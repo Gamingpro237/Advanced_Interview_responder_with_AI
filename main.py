@@ -17,7 +17,6 @@ gemini_api_key = "your_gemini_api_key_here"
 llama_endpoint = "http://your_llama_api_endpoint_here"  # Replace with your LLaMA API endpoint
 ollama_endpoint = "http://localhost:11434/v1/chat/completions"  # Default Ollama endpoint
 
-
 # Vosk model setup (update the path to your downloaded model)
 vosk_model_path = "path_to_vosk_model_directory"
 
@@ -39,11 +38,12 @@ stream = p.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, fram
 stream.start_stream()
 
 # Function to stop and clear the recording
-def stop_and_clear_recording():
-    global stream
-    if stream.is_active():
-        stream.stop_stream()
-        stream.close()
+# def stop_and_clear_recording():
+#     # global stream
+#     if stream.is_active():
+#         stream.stop_stream()
+#         stream.close()
+
 
 # Teleprompter: Floating window
 class Telepromter:
@@ -107,15 +107,15 @@ def get_response_from_openai(prompt, resume_context):
     full_prompt = f"Respond as if you were me. The question is :\n{prompt}\n\n My Resume information: {resume_context}"
     try:
         response = openai.chat.completions.create(
-                model="gpt-3.5-turbo",
-                messages=[
-             {"role":"user","content":full_prompt}],
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role": "user", "content": full_prompt}],
 
            max_tokens=60,
-              n=1,
-        stop=None,
-        temperature=0.7
-    )
+            n=1,
+            stop=None,
+            temperature=0.7
+        )
         return response.choices[0].message.content.strip()
     except Exception as e:
         return f"Error with OpenAI gpt-3.5-turbo: {e}"
@@ -123,14 +123,14 @@ def get_response_from_openai(prompt, resume_context):
 def get_response_from_google(prompt, resume_context):
     full_prompt = f"Respond as if you were me. The question is :\n{prompt}\n\n My Resume information: {resume_context}"
     try:
-            headers = {"Authorization": f"Bearer {gemini_api_key}"}
-            data = {"prompt": full_prompt}
-            response = requests.post("https://gemini-api.google.com/v1/generate", headers=headers, json=data)
-            response.raise_for_status()
-            return response.json().get("text", "Sorry, I couldn't process that.")
+        headers = {"Authorization": f"Bearer {gemini_api_key}"}
+        data = {"prompt": full_prompt}
+        response = requests.post("https://gemini-api.google.com/v1/generate", headers=headers, json=data)
+        response.raise_for_status()
+        return response.json().get("text", "Sorry, I couldn't process that.")
     except Exception as e:
-            print(f"Gemini API Error: {e}")
-            return "Sorry, I couldn't process that."
+        print(f"Gemini API Error: {e}")
+        return "Sorry, I couldn't process that."
 
 
 def get_response_from_meta(prompt, resume_context):
@@ -178,9 +178,13 @@ def get_response_from_ollama(prompt, resume_context):
 
 
 # Speech Recognition with Vosk
-def transcribe_audio():
-    print("Listening for questions...")
+def transcribe_audio(stream):
+    print("\nListening for questions...")
     while True:
+
+        if pause_event.is_set():
+            break
+
         data = stream.read(4000, exception_on_overflow=False)
         if recognizer.AcceptWaveform(data):
             result = recognizer.Result()
@@ -211,8 +215,21 @@ def start_interview():
     resume_data = extract_resume_data(resume_path)
     teleprompter = Telepromter()
     while True:
+
+        if pause_event.is_set():
+            print(f'Press spacebar to activate AI assistant..{int(time.time())}')
+            time.sleep(1)
+            continue
+
+        try:
+            # Initialize PyAudio
+            p = pyaudio.PyAudio()
+            stream = p.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=8000)
+            stream.start_stream()
+        except Exception as e:
+            continue
         # Step 1: Transcribe audio (question)
-        question = transcribe_audio()
+        question = transcribe_audio(stream)
 
         if question:
             # Step 2: Get response from the selected model
@@ -228,8 +245,11 @@ def start_interview():
 if __name__ == "__main__":
     # Start the keyboard listener in a separate thread
     keyboard_thread = threading.Thread(target=listen_for_keyboard)
-    keyboard_thread.daemon = True  # Run as a background thread
+    keyboard_thread.daemon = True  # Run   as a background thread
     keyboard_thread.start()
+
+    # start WITH DISABLED audio stream
+    pause_event.set()
 
     # Start the interview process
     start_interview()
