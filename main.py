@@ -111,7 +111,7 @@ def get_response_from_openai(prompt, resume_context):
             messages=[
                 {"role": "user", "content": full_prompt}],
 
-           max_tokens=60,
+           max_tokens=150,
             n=1,
             stop=None,
             temperature=0.7
