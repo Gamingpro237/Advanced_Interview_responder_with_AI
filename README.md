@@ -211,6 +211,11 @@ Contributions are welcome! Whether it's improving documentation, suggesting new 
 4. Push to the branch (`git push origin feature/YourFeature`).
 5. Open a pull request.
 
+## 🩷 Donations
+Your donation will support the development of this powerful resource, ensuring that everyone has access to the preparation and tools they need to succeed, regardless of their background. Together, we can help individuals unlock their potential, secure their dream jobs, and build brighter futures. Every contribution brings us closer to transforming lives through technology. Thank you for your support!
+
+[Donate🩷](https://www.paypal.com/donate/?hosted_button_id=HNTPMBU7MDXHS)
+
 ## 💼 Applications
 
 The Advanced Interview Responder can be utilized in various scenarios, including:
