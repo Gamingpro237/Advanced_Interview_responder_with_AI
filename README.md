@@ -33,9 +33,9 @@ Advanced_Interview_Responder_with_AI addresses these challenges head-on by actin
 
 - **Intelligent Interview Response Generation**
 
-Real-time AI-generated answers tailored to the interview questions.
+- Real-time AI-generated answers tailored to the interview questions.
 
-Customizable AI models (OpenAI GPT-4, Google Gemini, Meta LLaMA, and more) for diverse response styles.
+- Customizable AI models (OpenAI GPT-4, Google Gemini, Meta LLaMA, and more) for diverse response styles.
 
 
 - **Speech Recognition Integration**
