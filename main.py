@@ -49,7 +49,7 @@ stream.start_stream()
 class Telepromter:
     def __init__(self):
         self.root = tk.Tk()
-        self.root.title("Advanced_Interview_Responder_with_AI")
+        self.root.title("AI Nexus: Your Advanced AI-Powered Interview Assistant")
         self.root.geometry("1100x600")
         self.root.attributes("-topmost", True)
         self.root.attributes("-alpha", 0.6)  # Slight transparency
@@ -166,7 +166,7 @@ def get_response_from_ollama(prompt, resume_context):
             data = {
                 "model": "llama-7b",  # Specify the model name as configured in Ollama
                 "prompt": full_prompt,
-                "max_tokens": 150,
+                "max_tokens": 70,
                 "temperature": 0.7
             }
             response = requests.post(ollama_endpoint, headers=headers, json=data)
