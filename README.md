@@ -31,46 +31,46 @@ Advanced_Interview_Responder_with_AI addresses these challenges head-on by actin
 
 ## Features
 
-- **Intelligent Interview Response Generation**
+# 1. Intelligent Interview Response Generation
 
 - Real-time AI-generated answers tailored to the interview questions.
 
 - Customizable AI models (OpenAI GPT-4, Google Gemini, Meta LLaMA, and more) for diverse response styles.
 
 
-- **Speech Recognition Integration**
+# 2. Speech Recognition Integration
 
-Vosk speech recognition system for real-time question transcription.
+- Vosk speech recognition system for real-time question transcription.
 
-Seamless processing of spoken queries for accurate AI response generation.
-
-
-- **Teleprompter-Style Display**
-
-Displays responses on a user-friendly teleprompter interface.
-
-Allows users to maintain eye contact while delivering answers with confidence.
+- Seamless processing of spoken queries for accurate AI response generation.
 
 
-- **Resume Parsing for Contextual Answers**
+# 3. Teleprompter-Style Display
 
-Extracts key details from the user's resume in PDF format.
+- Displays responses on a user-friendly teleprompter interface.
 
-Enhances response relevance by aligning answers with the candidate’s experience.
-
-
-- **AI-Powered Personalization**
-
-Adjusts tone and style to fit company culture.
-
-Ensures responses align with job descriptions and expectations.
+- Allows users to maintain eye contact while delivering answers with confidence.
 
 
-- **Practice and Control Features**
+# 4. Resume Parsing for Contextual Answers
 
-Keyboard shortcuts(e.g Space bar) for pausing and resuming practice sessions.
+- Extracts key details from the user's resume in PDF format.
 
-Simplified command-line options for seamless interview preparation.
+- Enhances response relevance by aligning answers with the candidate’s experience.
+
+
+# 5. AI-Powered Personalization
+
+- Adjusts tone and style to fit company culture.
+
+- Ensures responses align with job descriptions and expectations.
+
+
+# 6. Practice and Control Features
+
+- Keyboard shortcuts(e.g Space bar) for pausing and resuming practice sessions.
+
+- Simplified command-line options for seamless interview preparation.
 
 ## 🛠️ How It Works
 
