@@ -107,18 +107,18 @@ def get_response_from_openai(prompt, resume_context):
     full_prompt = f"Respond as if you were me. The question is :\n{prompt}\n\n My Resume information: {resume_context}"
     try:
         response = openai.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4o-mini",
             messages=[
                 {"role": "user", "content": full_prompt}],
 
-           max_tokens=150,
+           max_tokens=70,
             n=1,
             stop=None,
             temperature=0.7
         )
         return response.choices[0].message.content.strip()
     except Exception as e:
-        return f"Error with OpenAI gpt-3.5-turbo: {e}"
+        return f"Error with OpenAI gpt-4o-mini: {e}"
 
 def get_response_from_google(prompt, resume_context):
     full_prompt = f"Respond as if you were me. The question is :\n{prompt}\n\n My Resume information: {resume_context}"
